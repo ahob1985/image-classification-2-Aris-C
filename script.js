@@ -25,17 +25,17 @@ function setup() {
   buttonDiv = createDiv();
   uploadButton = createFileInput(handleFile);
   uploadButton.parent(buttonDiv);
-  uploadButton.style("Display", "None");
-  submitButton = createButton("Submit");
-  submitbutton.parent(buttonDiv);
+  uploadButton.style("display", "none");
+  submitButton = createButton("SUBMIT");
+  submitButton.parent(buttonDiv);
   submitButton.mousePressed(predictImage);
   submitButton.style("display", "none");
-  resetButton = createButton("Reset");
+  resetButton = createButton("RESET");
   resetButton.parent(buttonDiv);
   resetButton.mousePressed(resetCanvas);
-  resetButton.style("display","none");
+  resetButton.style("display", "none");
   //load model
-  mobilenet = ml5.imageClassifier("mobilenet", modelReady);
+  mobilenet = ml5.imageClassifier("MobileNet", modelReady);
 
   }
 
@@ -52,8 +52,8 @@ textP.html("Upload an image to classify! ");
 
 function resetCanvas() {
 background(225);
-submitButton.style("display","none");
-resetButton.style("display","none");
+submitButton.style("display", "none");
+resetButton.style("display", "none");
 modelReady(); 
 }
 
